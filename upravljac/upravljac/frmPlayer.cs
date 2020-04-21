@@ -12,6 +12,7 @@ namespace upravljac
 {
     public partial class frmPlayer : Form
     {
+        private PlayerKontrola mp3Player = new PlayerKontrola();
         public frmPlayer()
         {
             InitializeComponent();
@@ -42,6 +43,18 @@ namespace upravljac
         private void BtnForward_Click(object sender, EventArgs e)
         {
             Muzika.Forward();
+        }
+
+        private void OtvoriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Mp3 Files|*.mp3";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    mp3Player.open(ofd.FileName);
+                }
+            }
         }
     }
 }

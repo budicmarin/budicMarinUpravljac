@@ -8,6 +8,8 @@ namespace upravljac
 {
     public interface IPlayerKontrola
     {
+        
+        void open(string File);
         void Play();
         void Pause();
         void Stop();

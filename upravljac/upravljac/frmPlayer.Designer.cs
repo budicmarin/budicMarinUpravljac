@@ -34,6 +34,9 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.Otvori = new System.Windows.Forms.MenuStrip();
+            this.otvoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Otvori.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBackward
@@ -43,8 +46,8 @@
             this.btnBackward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBackward.FlatAppearance.BorderSize = 0;
             this.btnBackward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackward.Location = new System.Drawing.Point(16, 15);
-            this.btnBackward.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBackward.Location = new System.Drawing.Point(15, 37);
+            this.btnBackward.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackward.Name = "btnBackward";
             this.btnBackward.Size = new System.Drawing.Size(133, 123);
             this.btnBackward.TabIndex = 4;
@@ -58,8 +61,8 @@
             this.btnForward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnForward.FlatAppearance.BorderSize = 0;
             this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForward.Location = new System.Drawing.Point(581, 15);
-            this.btnForward.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnForward.Location = new System.Drawing.Point(580, 37);
+            this.btnForward.Margin = new System.Windows.Forms.Padding(4);
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(133, 123);
             this.btnForward.TabIndex = 3;
@@ -73,8 +76,8 @@
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStop.FlatAppearance.BorderSize = 0;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Location = new System.Drawing.Point(299, 15);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStop.Location = new System.Drawing.Point(298, 37);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(133, 123);
             this.btnStop.TabIndex = 2;
@@ -88,8 +91,8 @@
             this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPause.FlatAppearance.BorderSize = 0;
             this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.Location = new System.Drawing.Point(157, 15);
-            this.btnPause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPause.Location = new System.Drawing.Point(156, 37);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(4);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(133, 123);
             this.btnPause.TabIndex = 1;
@@ -103,13 +106,31 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Location = new System.Drawing.Point(440, 15);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlay.Location = new System.Drawing.Point(439, 37);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(133, 123);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
+            // 
+            // Otvori
+            // 
+            this.Otvori.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Otvori.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.otvoriToolStripMenuItem});
+            this.Otvori.Location = new System.Drawing.Point(0, 0);
+            this.Otvori.Name = "Otvori";
+            this.Otvori.Size = new System.Drawing.Size(739, 28);
+            this.Otvori.TabIndex = 5;
+            this.Otvori.Text = "Otvori";
+            // 
+            // otvoriToolStripMenuItem
+            // 
+            this.otvoriToolStripMenuItem.Name = "otvoriToolStripMenuItem";
+            this.otvoriToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.otvoriToolStripMenuItem.Text = "Otvori";
+            this.otvoriToolStripMenuItem.Click += new System.EventHandler(this.OtvoriToolStripMenuItem_Click);
             // 
             // frmPlayer
             // 
@@ -121,16 +142,21 @@
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.Otvori);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainMenuStrip = this.Otvori;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPlayer";
             this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Player";
+            this.Otvori.ResumeLayout(false);
+            this.Otvori.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,6 +167,8 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnForward;
         private System.Windows.Forms.Button btnBackward;
+        private System.Windows.Forms.MenuStrip Otvori;
+        private System.Windows.Forms.ToolStripMenuItem otvoriToolStripMenuItem;
     }
 }
 
